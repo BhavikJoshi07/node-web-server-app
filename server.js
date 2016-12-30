@@ -23,7 +23,14 @@ app.get('/', (req, res) => {
     });
 });
 
-app.get('/about', (req,res) => {
+app.get('/projects', (req, res) => {
+    res.render('projects.hbs', {
+        pageTitle : 'Projects Page',
+        welcomeMessage : 'Welcome to my Portfolio.'
+    });
+});
+
+app.get('/json', (req,res) => {
     res.send({
         name : 'Bhavik',
         likes: [
